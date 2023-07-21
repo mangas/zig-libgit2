@@ -8,8 +8,6 @@ const libssh2 = build_pkgs.libssh2;
 const zlib = build_pkgs.zlib;
 
 pub fn build(b: *std.build.Builder) !void {
-    _ = b.addModule("zig-libgit2", .{ .source_file = .{ .path = "libgit2.zig" } });
-
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
